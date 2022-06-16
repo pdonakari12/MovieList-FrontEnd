@@ -1,0 +1,57 @@
+[debug] [2022-06-16T11:44:33.832Z] ----------------------------------------------------------------------
+[debug] [2022-06-16T11:44:33.837Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\parasharam_donakari\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init --debug
+[debug] [2022-06-16T11:44:33.839Z] CLI Version:   11.1.0
+[debug] [2022-06-16T11:44:33.839Z] Platform:      win32
+[debug] [2022-06-16T11:44:33.840Z] Node Version:  v16.13.2
+[debug] [2022-06-16T11:44:33.843Z] Time:          Thu Jun 16 2022 17:14:33 GMT+0530 (India Standard Time)
+[debug] [2022-06-16T11:44:33.844Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-16T11:44:33.869Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-16T11:44:33.872Z] > authorizing via signed-in user (pdonakari12@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Personal\Movie-LIst1\my-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-06-16T11:44:46.175Z] > refreshing access token with scopes: []
+[debug] [2022-06-16T11:44:46.177Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-06-16T11:44:46.177Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-06-16T11:44:46.561Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-06-16T11:44:46.562Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-06-16T11:44:46.589Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-06-16T11:44:47.491Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-06-16T11:44:47.492Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project reactmovies1991 (reactmovies1991) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-06-16T11:45:02.879Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-06-16T11:45:03.224Z] FetchError: request to https://www.gstatic.com/firebasejs/releases.json failed, reason: unable to get local issuer certificate
+    at ClientRequest.<anonymous> (C:\Users\parasharam_donakari\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1491:11)
+    at ClientRequest.emit (node:events:390:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at TLSSocket.socketErrorListener (node:_http_client:447:9)
+    at TLSSocket.emit (node:events:390:28)
+    at TLSSocket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to make request to https://www.gstatic.com/firebasejs/releases.json

@@ -1,0 +1,47 @@
+import CreateActor from "./actors/CreateActor";
+import EditActor from "./actors/EditActor";
+import IndexActors from "./actors/IndexActors";
+import IndexUsers from "./Auth/IndexUsers";
+import Login from "./Auth/Login";
+import Register from "./Auth/Register";
+import CreateGenre from "./genres/CreateGenre";
+import EditGenre from "./genres/EditGenre";
+import IndexGenres from "./genres/IndexGenres";
+import CreateMovie from "./movies/CreateMovie";
+import EditMovie from "./movies/EditMovie";
+import FilterMovies from "./movies/FilterMovies";
+import landingPage from "./movies/LandingPage";
+import MovieDetails from "./movies/MovieDetails";
+import CreateMovieTheater from "./movietheaters/CreateMovieTheater";
+import EditMovieTheater from "./movietheaters/EditMovieTheater";
+import IndexMovieTheaters from "./movietheaters/IndexMovieTheaters";
+import RedirectToLandingPage from "./utils/RedirectToLandingPage";
+
+const routes= [
+ {path:'/genres', component:IndexGenres,exact:true ,isAdmin:true},
+ {path:'/genres/create', component:CreateGenre,isAdmin:true},
+ {path:'/genres/edit/:id(\\d+)', component:EditGenre,isAdmin:true},
+
+ {path:'/actors', component:IndexActors,exact:true,isAdmin:true },
+ {path:'/actors/create', component:CreateActor,isAdmin:true},
+ {path:'/actors/edit/:id(\\d+)', component:EditActor,isAdmin:true},
+
+ {path:'/movietheaters', component:IndexMovieTheaters,exact:true,isAdmin:true },
+ {path:'/movietheaters/create', component:CreateMovieTheater,isAdmin:true},
+ {path:'/movietheaters/edit/:id(\\d+)', component:EditMovieTheater,isAdmin:true},
+
+ {path:'/movies/create', component:CreateMovie,exact:true ,isAdmin:true},
+ {path:'/movies/filter', component:FilterMovies},
+ {path:'/movies/edit/:id(\\d+)', component:EditMovie,isAdmin:true},
+ {path:'/movies/:id(\\d+)', component:MovieDetails},
+
+ {path:'/register', component:Register},
+ {path:'/login', component:Login},
+ {path:'/users', component:IndexUsers,isAdmin:true},
+
+ {path:'/',component:landingPage, exact:true},
+ {Path:'*',component:RedirectToLandingPage}
+];
+
+
+export default routes;
